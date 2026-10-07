@@ -1,0 +1,116 @@
+
+
+	设计测试程序
+	加入DAC_DDS程序
+	增加DSP模块，实现FIR滤波
+	计算8k,16k,32k,64k点FFT参数,存入W25，初始化时根据FFT点数宏定义取出
+	设计UI程序
+	
+
+
+STM32F407ZGT6_Template_2023-12-01_130:
+	1. 用于通过串口烧录字库到SPI flash
+	通过串口写入字库文件到flash
+	命令：
+		设置文件存入起始地址 Start:xxxx （Start:+16进制地址+空格）		
+		发送文件，每次2048字节，间隔300ms
+
+
+STM32F407ZGT6_Template_2023-12-01_1330:
+	1. CubeMX配置串口, LL库生成代码, USART1测试通过
+
+	
+	
+STM32F407ZGT6_Template_2023-11-30_2130:
+	1. 修改UART_FIFO.c中bug： InitHardUart函数中清除中断标志位部分，串口2-6均清除的串口1标志
+	
+
+
+	
+STM32F407ZGT6_Template_2023-11-25_2200:
+	1. 设计触屏键盘, 验证通过。
+	2. 修改外部SRAM访问时序,原延时参数 0,6,0 经测试，在部分板子上易出错， 修改为3,7,3后更稳定。访问速度下降。
+
+
+STM32F407ZGT6_Template_2023-11-25_1020:
+	1. 增加malloc内存管理
+	2. 修改 UART_FIFO 新增宏定义 UARTBufferArea 定义串口缓存位置, 
+	   InSRAM,ExtSRAM,InCCMRAM 分别对应内部SRAM,外部SRAM和内部CCMRAM
+	3. 修改 sys.h 新增 union_u32TypeDef, union_f32TypeDef 数据类型
+	4. 自动存储校准系数
+	5. LED,键,触屏任务测试通过
+
+
+STM32F407ZGT6_Template_2023-11-25_0740:
+	1. CubeMX 配置, 暂时关闭看门狗
+	2. 用开窗修改显存的方法显示字符仍有错位现象，改为直接按坐标写点的方法，效率会低点
+	3. 设计触屏驱动，触屏校准函数，测试通过
+
+
+STM32F407ZGT6_Template_2023-11-24_0800:
+	1. 去除Function.c中所有应用代码,计划打造通用模板
+	2. 重新整理文件架构
+	3. 修正显示中英文字符函数bug，将记录每列点数的变量设为 volatile 类型
+	4. CubeMX 配置外部SRAM测试通过,配置好后直接按地址访问
+	5. 添加触屏驱动 xpt2046 , DAC_Chanel2（PA5） 被 T_CLK 占用, 能用的 DAC 输出只剩一个了, 触屏校正测试失败，待解决
+
+
+
+STM32F407ZGT6_Template_2023-08-04_0616:
+	1. DAC 有问题，有配置不成功的情况，停止后可能不能成功启动
+	2. CW,2PSK,AM测试通过
+
+
+
+STM32F407ZGT6_Template_2023-08-03_2200:
+	1. 修改 LCD_Fill 函数bug
+	2. CW,2PSK测试通过
+
+
+
+STM32F407ZGT6_Template_2023-08-03_0820:
+	1. 设计FFT分析函数
+	2. 配置系统属性 list 路径到项目下，否则用CubeMX配置的项目无法查看map文件
+	3. adc采样率调味1.2M，避免频谱混叠
+
+
+STM32F407ZGT6_Template_2023-08-02_2320:
+	1. DAC输出正弦波和方波程序验证通过
+	2. 绘制频谱函数验证通过
+	3. FFT分析函数未验证
+
+
+STM32F407ZGT6_Template_2023-08-02_1300:
+	1. 8192点FFT测试通过
+	2. 采样率调为800KHz, 2MHz频点正好在第4096点, 频谱分辨率97.6Hz
+
+
+STM32F407ZGT6_Template_2023-08-02_1040:
+	1. CubeMX配置 ADC DMA 测试通过
+
+
+STM32F407ZGT6_Template_2023-08-02_1000:
+	1. CubeMX配置 DAC DMA 测试通过
+
+
+
+STM32F407ZGT6_Template_2023-08-01_2240:
+	1. XPT2046 驱动测试通过
+
+
+
+STM32F407ZGT6_Template_2023-08-01_2050:
+	1. 优化LCD驱动，硬件代码和功能函数分开
+	2. 设计中英文显示函数，字符串显示函数验证通过
+
+
+
+STM32F407ZGT6_Template_2023-08-01_1950:
+	1. CubeMX配置 FSMC LCD接口，读写LCD测试通过
+
+
+STM32F407ZGT6_Template_2023-08-01_1617:
+	1. 建立CubeMX项目模板
+	2. 设置仿真方式为Series（即SWD两线制）
+	3. CubeMX配置按键、LED、IIC、SPI、看门狗、定时器
+	4. 配置灯、键、串口、AT24C02、W25Q128等外设，验证通过

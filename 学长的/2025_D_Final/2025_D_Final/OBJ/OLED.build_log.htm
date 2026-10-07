@@ -1,0 +1,154 @@
+<html>
+<body>
+<pre>
+<h1>礦ision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: μVision V5.38.0.0
+Copyright (C) 2022 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: xinsky,  , LIC=8VRJ7-EBFIL-CXPU6-DJCYZ-XZRPZ-BIWW0
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Plus  Version: 5.41.0.0
+Toolchain Path:  D:\Keil_v5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 7 (build 960)
+Assembler:       Armasm.exe V5.06 update 7 (build 960)
+Linker/Locator:  ArmLink.exe V5.06 update 7 (build 960)
+Library Manager: ArmAr.exe V5.06 update 7 (build 960)
+Hex Converter:   FromElf.exe V5.06 update 7 (build 960)
+CPU DLL:         SARMCM3.DLL V5.41.0.0
+Dialog DLL:      DCM.DLL V1.17.5.0
+Target DLL:      CMSIS_AGDI.dll V1.33.21.0
+Dialog DLL:      TCM.DLL V1.56.4.0
+ 
+<h2>Project:</h2>
+C:\Users\xinsky\Desktop\2025_D_Final\2025_D_Final\USER\2025_D.uvprojx
+Project File Date:  12/21/2025
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 7 (build 960)', folder: 'D:\Keil_v5\ARM\ARMCC\Bin'
+Build target '2025_D'
+assembling startup_stm32f40_41xxx.s...
+compiling delay.c...
+compiling misc.c...
+compiling key.c...
+compiling AD9959.c...
+compiling oled.c...
+compiling stm32f4xx_it.c...
+compiling system_stm32f4xx.c...
+compiling led.c...
+compiling sys.c...
+compiling 24cxx.c...
+compiling relay.c...
+compiling AD5933.c...
+compiling stm32f4xx_usart.c...
+compiling usart.c...
+compiling AD9959_Outset.c...
+..\HARDWARE\AD9959\AD9959_Outset.c(137): warning:  #177-D: variable "AmplitudeControldata"  was declared but never referenced
+  	 uchar AmplitudeControldata[3] = {0x00,0x03,0xff};									//二级调制时启用，默认输出最大
+..\HARDWARE\AD9959\AD9959_Outset.c(220): warning:  #177-D: variable "AmplitudeControldata"  was declared but never referenced
+  	 uchar AmplitudeControldata[3] = {0x00,0x03,0xff};									//四级调制时启用，默认输出最大
+..\HARDWARE\AD9959\AD9959_Outset.c(307): warning:  #177-D: variable "AmplitudeControldata"  was declared but never referenced
+  	 uchar AmplitudeControldata[3] = {0x00,0x03,0xff};									//四级调制时启用，默认输出最大
+..\HARDWARE\AD9959\AD9959_Outset.c(414): warning:  #177-D: variable "AmplitudeControldata"  was declared but never referenced
+  	 uchar AmplitudeControldata[3] = {0x00,0x03,0xff};									//八级调制时启用，默认输出最大
+..\HARDWARE\AD9959\AD9959_Outset.c(545): warning:  #177-D: variable "AmplitudeControldata"  was declared but never referenced
+  	 uchar AmplitudeControldata[3] = {0x00,0x03,0xff};									//八级调制时启用，默认输出最大
+..\HARDWARE\AD9959\AD9959_Outset.c(676): warning:  #177-D: variable "AmplitudeControldata"  was declared but never referenced
+  	 uchar AmplitudeControldata[3] = {0x00,0x03,0xff};									//八级调制时启用，默认输出最大
+..\HARDWARE\AD9959\AD9959_Outset.c(808): warning:  #177-D: variable "AmplitudeControldata"  was declared but never referenced
+  	 uchar AmplitudeControldata[3] = {0x00,0x03,0xff};									//八级调制时启用，默认输出最大
+..\HARDWARE\AD9959\AD9959_Outset.c(980): warning:  #177-D: variable "AmplitudeControldata"  was declared but never referenced
+  	 uchar AmplitudeControldata[3] = {0x00,0x03,0xff};									//十六级调制时启用，默认输出最大
+..\HARDWARE\AD9959\AD9959_Outset.c(1198): warning:  #177-D: variable "AmplitudeControldata"  was declared but never referenced
+  	 uchar AmplitudeControldata[3] = {0x00,0x03,0xff};									//十六级调制时启用，默认输出最大
+..\HARDWARE\AD9959\AD9959_Outset.c(1417): warning:  #177-D: variable "AmplitudeControldata"  was declared but never referenced
+  	 uchar AmplitudeControldata[3] = {0x00,0x03,0xff};									//十六级调制时启用，默认输出最大
+..\HARDWARE\AD9959\AD9959_Outset.c(1640): warning:  #177-D: variable "AmplitudeControldata"  was declared but never referenced
+  	 uchar AmplitudeControldata[3] = {0x00,0x03,0xff};									//十六级调制时启用，默认输出最大
+..\HARDWARE\AD9959\AD9959_Outset.c: 11 warnings, 0 errors
+compiling main.c...
+..\HARDWARE\EEPROM\24cxx.h(8): warning:  #47-D: incompatible redefinition of macro "READ_SDA"  (declared at line 52 of "..\HARDWARE\AD5933\AD5933.h")
+  #define READ_SDA   PBin(9)  //输入SDA
+main.c(175): warning:  #167-D: argument of type "volatile float *" is incompatible with parameter of type "float *"
+  		DA5933_Get_RsRealImage(&R_Impedance,&R_Rad, &realData, &imageData);	//测量所夹持电阻的阻值，及DFT的相位，实部数据，虚部数据
+main.c(175): warning:  #167-D: argument of type "volatile float *" is incompatible with parameter of type "float *"
+  		DA5933_Get_RsRealImage(&R_Impedance,&R_Rad, &realData, &imageData);	//测量所夹持电阻的阻值，及DFT的相位，实部数据，虚部数据
+main.c(175): warning:  #167-D: argument of type "volatile float *" is incompatible with parameter of type "float *"
+  		DA5933_Get_RsRealImage(&R_Impedance,&R_Rad, &realData, &imageData);	//测量所夹持电阻的阻值，及DFT的相位，实部数据，虚部数据
+main.c(175): warning:  #167-D: argument of type "volatile float *" is incompatible with parameter of type "float *"
+  		DA5933_Get_RsRealImage(&R_Impedance,&R_Rad, &realData, &imageData);	//测量所夹持电阻的阻值，及DFT的相位，实部数据，虚部数据
+main.c(538): warning:  #167-D: argument of type "volatile float *" is incompatible with parameter of type "float *"
+  						DA5933_Get_RsRealImage(&R_Impedance,&R_Rad, &realData, &imageData);	
+main.c(538): warning:  #167-D: argument of type "volatile float *" is incompatible with parameter of type "float *"
+  						DA5933_Get_RsRealImage(&R_Impedance,&R_Rad, &realData, &imageData);	
+main.c(538): warning:  #167-D: argument of type "volatile float *" is incompatible with parameter of type "float *"
+  						DA5933_Get_RsRealImage(&R_Impedance,&R_Rad, &realData, &imageData);	
+main.c(538): warning:  #167-D: argument of type "volatile float *" is incompatible with parameter of type "float *"
+  						DA5933_Get_RsRealImage(&R_Impedance,&R_Rad, &realData, &imageData);	
+main.c(566): warning:  #167-D: argument of type "volatile float *" is incompatible with parameter of type "float *"
+  						DA5933_Get_RsRealImage(&R_Impedance,&R_Rad, &realData, &imageData);	
+main.c(566): warning:  #167-D: argument of type "volatile float *" is incompatible with parameter of type "float *"
+  						DA5933_Get_RsRealImage(&R_Impedance,&R_Rad, &realData, &imageData);	
+main.c(566): warning:  #167-D: argument of type "volatile float *" is incompatible with parameter of type "float *"
+  						DA5933_Get_RsRealImage(&R_Impedance,&R_Rad, &realData, &imageData);	
+main.c(566): warning:  #167-D: argument of type "volatile float *" is incompatible with parameter of type "float *"
+  						DA5933_Get_RsRealImage(&R_Impedance,&R_Rad, &realData, &imageData);	
+main.c(594): warning:  #167-D: argument of type "volatile float *" is incompatible with parameter of type "float *"
+  						DA5933_Get_RsRealImage(&R_Impedance,&R_Rad, &realData, &imageData);
+main.c(594): warning:  #167-D: argument of type "volatile float *" is incompatible with parameter of type "float *"
+  						DA5933_Get_RsRealImage(&R_Impedance,&R_Rad, &realData, &imageData);
+main.c(594): warning:  #167-D: argument of type "volatile float *" is incompatible with parameter of type "float *"
+  						DA5933_Get_RsRealImage(&R_Impedance,&R_Rad, &realData, &imageData);
+main.c(594): warning:  #167-D: argument of type "volatile float *" is incompatible with parameter of type "float *"
+  						DA5933_Get_RsRealImage(&R_Impedance,&R_Rad, &realData, &imageData);
+main.c(614): warning:  #167-D: argument of type "volatile float *" is incompatible with parameter of type "float *"
+  						DA5933_Get_RsRealImage(&R_Impedance,&R_Rad, &realData, &imageData);
+main.c(614): warning:  #167-D: argument of type "volatile float *" is incompatible with parameter of type "float *"
+  						DA5933_Get_RsRealImage(&R_Impedance,&R_Rad, &realData, &imageData);
+main.c(614): warning:  #167-D: argument of type "volatile float *" is incompatible with parameter of type "float *"
+  						DA5933_Get_RsRealImage(&R_Impedance,&R_Rad, &realData, &imageData);
+main.c(614): warning:  #167-D: argument of type "volatile float *" is incompatible with parameter of type "float *"
+  						DA5933_Get_RsRealImage(&R_Impedance,&R_Rad, &realData, &imageData);
+main.c(646): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  							Cable_Short_Length = RR_Real_Keep / I_1M / 2.0;
+main.c(654): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  							Cable_Short_Length = RR_Real_Keep / I_50M / 2.0;
+main.c(529): warning:  #546-D: transfer of control bypasses initialization of:
+            variable "ZRp"  (declared at line 541)
+            variable "ZRs"  (declared at line 542)
+            variable "ZRead"  (declared at line 543)
+  				switch(state)
+  				^
+main.c: 24 warnings, 0 errors
+compiling stm32f4xx_gpio.c...
+compiling stm32f4xx_syscfg.c...
+compiling stm32f4xx_dbgmcu.c...
+compiling stm32f4xx_exti.c...
+compiling stm32f4xx_pwr.c...
+compiling stm32f4xx_adc.c...
+compiling interrupt.c...
+compiling stm32f4xx_dma.c...
+compiling stm32f4xx_dma2d.c...
+compiling stm32f4xx_rcc.c...
+compiling adc.c...
+compiling stm32f4xx_tim.c...
+linking...
+Program Size: Code=42288 RO-data=9248 RW-data=312 ZI-data=3152  
+FromELF: creating hex file...
+"..\OBJ\OLED.axf" - 0 Error(s), 35 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: Keil
+                https://www.keil.com/pack/Keil.STM32F4xx_DFP.2.17.1.pack
+                Keil.STM32F4xx_DFP.2.17.1
+                STMicroelectronics STM32F4 Series Device Support, Drivers and Examples
+
+<h2>Collection of Component include folders:</h2>
+  D:/Keil_v5/ARM/Packs/Keil/STM32F4xx_DFP/2.17.1/Drivers/CMSIS/Device/ST/STM32F4xx/Include
+
+<h2>Collection of Component Files used:</h2>
+Build Time Elapsed:  00:01:22
+</pre>
+</body>
+</html>
